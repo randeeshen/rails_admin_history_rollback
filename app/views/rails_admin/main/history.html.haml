@@ -50,7 +50,7 @@
           - else
             %td= "#{@abstract_model.config.label} ##{object.item}"
         %td= object.message.in?(['delete', 'new']) ? t("admin.actions.#{object.message}.done").capitalize : object.message
-        %td= link_to("View changes", "#", class: "changeset", :data => {:url => url_for(action: action(:history_index, @abstract_model).action_name, model_name: @abstract_model.to_param, version_id: object.version_id)})
+        %td= link_to("查看", "#", class: "changeset", :data => {:url => url_for(action: action(:history_index, @abstract_model).action_name, model_name: @abstract_model.to_param, version_id: object.version_id)})
 
 - unless params[:all] || !@history.respond_to?(:current_page)
   = paginate(@history, theme: 'twitter-bootstrap', remote: true)

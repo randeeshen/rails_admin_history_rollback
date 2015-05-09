@@ -49,10 +49,10 @@
       dialog.find('.cancel-action').unbind().click(function(){
         dialog.modal('hide');
         return false;
-      }).html('Cancel');
+      }).html('取消');
 
       dialog.find('#version tr').prettyTextDiff();
-      saveButton.attr('href', table.data('rollbackurl')).html('Rollback');
+      saveButton.attr('href', table.data('rollbackurl')).html('还原');
     },
 
     _getModal: function() {
@@ -70,7 +70,7 @@
             </div>\
             <div class="modal-footer">\
               <a href="#" class="btn cancel-action">...</a>\
-              <a href="#" class="btn btn-primary save-action" data-method="put" data-confirm="Are you sure?">...</a>\
+              <a href="#" class="btn btn-primary save-action" data-method="put" data-confirm="确定要还原？">...</a>\
             </div>\
             </div>\
             </div>\
